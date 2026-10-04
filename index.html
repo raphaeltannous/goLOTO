@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height" />
+
+  <title>LOTO System | Applied Cryptography</title>
+  <meta name="description" content="LOTO System build on the default chained network of drand." />
+  <meta name="keywords"
+    content="applied cryptography, encryption, cryptographic protocols, cybersecurity education, project, loto" />
+  <meta name="author" content="Raphael Tannous" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://loto.appliedcryptography.me/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="LOTO System | Applied Cryptography" />
+  <meta property="og:description" content="LOTO System build on the default chained network of drand." />
+  <meta property="og:url" content="https://loto.appliedcryptography.me" />
+  <meta property="og:locale" content="en_US" />
+
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" sizes="180x180" />
+  <link rel="preload" as="font" type="font/woff2"
+    href="fonts/google/inriaserif/v18/fC14PYxPY3rXxEndZJAzN3wQUjjCjl2PaGxM.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2"
+    href="fonts/google/inriaserif/v18/fC1nPYxPY3rXxEndZJAzN3SuRy_lq3KnYmQ.woff2" crossorigin />
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/balls.css" />
+  <link rel="stylesheet" href="css/highlight.css">
+  <link rel="stylesheet" href="fonts/phosphor/phosphor.css" />
+  <link rel="stylesheet" href="fonts/google/google.css" />
+
+  <script src="js/wasm_exec.js"></script>
+  <script type="module" src="js/wasm_run.js" defer></script>
+  <script type="module" src="js/main.js" defer></script>
+</head>
+
+<body>
+  <a href="https://palestinebanner.com/click" style="
+  box-sizing:border-box;display:flex;align-items:center;
+  justify-content:center;gap:12px;width:100%;padding:15px 20px;
+  background:#000;color:#75e39b;text-decoration:none;text-align:center;
+  font:600 14px/1.5 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="16" viewBox="0 0 60 30" aria-hidden="true"
+      style="display:block;flex-shrink:0;outline:1px solid #ffffff30;">
+      <path fill="#000" d="M0 0h60v10H0z" />
+      <path fill="#fff" d="M0 10h60v10H0z" />
+      <path fill="#149454" d="M0 20h60v10H0z" />
+      <path fill="#e6443f" d="m0 0 30 15L0 30z" />
+    </svg>
+    <span>Freedom, dignity, and justice for Palestinians.</span>
+    <span aria-hidden="true" style="flex-shrink:0;">&#8599;</span>
+  </a>
+
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="navbar-logo">LOTO System</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="navbar-links">
+        <a href="#drawn-balls">Drawn Balls</a>
+        <a href="#how-it-works">How it Works</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section id="drawn-balls" class="section">
+      <div class="subsection">
+        <div class="balls">
+          <div id="ball-1" class="ball">
+            <span id="ball-1-span">
+              #
+            </span>
+          </div>
+          <div id="ball-2" class="ball">
+            <span id="ball-2-span">
+              #
+            </span>
+          </div>
+          <div id="ball-3" class="ball">
+            <span id="ball-3-span">
+              #
+            </span>
+          </div>
+          <div id="ball-4" class="ball">
+            <span id="ball-4-span">
+              #
+            </span>
+          </div>
+          <div id="ball-5" class="ball">
+            <span id="ball-5-span">
+              #
+            </span>
+          </div>
+          <div id="ball-6" class="ball">
+            <span id="ball-6-span">
+              #
+            </span>
+          </div>
+          <div id="ball-7" class="ball">
+            <span id="ball-7-span">
+              #
+            </span>
+          </div>
+        </div>
+
+        <p class="subtitle mt-3">
+          <span>
+            The balls will be updated automatically each 30 seconds.
+          </span>
+        </p>
+    </section>
+
+    <section id="how-it-works" class="section">
+      <div class="section-header">
+        <h2 class="section-title">How it Works?</h2>
+      </div>
+
+
+      <div class="subsection">
+        <h3 class="subsection-title"><i class="icon ph-duotone ph-tree-structure"></i>Structure</h3>
+        <div class="card">
+          <div class="book-display">
+            <img src="images/drand.png" alt="Drand Logo" class="drand-image" loading="lazy" />
+            <div>
+              <h4 class="mb-2"><i class="icon ph-duotone ph-graph"></i>Drand Network</h4>
+              <p>
+                Quoting <a href="https://docs.drand.love/about/" target="_blank">drand.love</a>:
+
+                &ldquo;drand (lower case, pronounced "DEE-rand") is a distributed randomness beacon daemon written in
+                the Go
+                programming language. It generates collective, publicly verifiable, unbiased, and unpredictable random
+                values at fixed intervals using advanced cryptographic techniques.&rdquo;
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="book-display">
+            <img src="images/league-of-entropy.avif" alt="League of Entropy Logo" class="league-of-entropy-image"
+              loading="lazy" />
+            <div>
+              <h4 class="mb-2"><i class="icon ph-duotone ph-shield-star"></i>League of Entropy</h4>
+              <p>
+                The League of Entropy is a voluntary consortium, that runs drand, to provide publicly verifiable,
+                unbiased, and unpredictable randomness. The consortium consits of big companys like <a
+                  href="https://cloudflare.com" target="_blank">Cloudflare</a>, <a href="https://ethereum.foundation/"
+                  target="_blank">Ethereum Foundation</a>, and <a href="https://drand.love/" target="_blank">more</a>
+                where they use drand to publish randomness.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title"><i class="icon ph-duotone ph-gear"></i>Drand Network Modes</h3>
+
+        <div class="card">
+          <h4 class="mb-2"><i class="icon ph-duotone ph-link"></i>Network in Chain Mode</h4>
+          <p>
+            In chain mode, each round depends on the previous round, which mean that you can't predict future rounds'
+            message.
+          </p>
+          <div class="card-image">
+            <img class="only-on-dark" src="images/drand-chained-mode-dark.png" alt="Drand default chain mode" />
+            <img class="only-on-light" src="images/drand-chained-mode-light.png" alt="Drand default chain mode" />
+          </div>
+        </div>
+
+        <div class="card">
+          <h4 class="mb-2"><i class="icon ph-duotone ph-link-break"></i>Network in Unchained Mode</h4>
+          <p>
+            In unchained mode, each round does not depend on the previous round, which mean that you can predict future
+            rounds' message.
+          </p>
+          <div class="card-image">
+            <img class="only-on-dark" src="images/drand-unchained-mode-dark.png" alt="Drand default chain mode" />
+            <img class="only-on-light" src="images/drand-unchained-mode-light.png" alt="Drand default chain mode" />
+          </div>
+        </div>
+
+        <div class="card">
+          <h4 class="mb-2"><i class="icon ph-duotone ph-shield-star"></i>The League of Entropy's Networks</h4>
+          <p>
+            There are three networks that we can access their randomness from the League of Entropy's endpoints:
+          </p>
+
+          <ol>
+            <li>
+              <code>default</code> network, which runs in chained mode and interests us for the LOTO system.
+            </li>
+            <li>
+              <code>quicknet</code> network, which runs in unchained mode and help us to create time-lock encrypted
+              messages.
+            </li>
+            <li>
+              <code>evmnet</code> network, which runs in unchained mode for code that runs in the
+              <a href="https://ethereum.org/developers/docs/evm/" target="_blank">EVM</a>.
+            </li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h4 class="mb-2"><i class="icon ph-duotone ph-link"></i>The <code>default</code> Network</h4>
+          <p>
+            Each network has a chain hash that acts as an identifier for the network. The chain hash for the
+            <code>default</code> network is
+            <code>8990e7a9aaed2ffed73dbd7092123d6f289930540d7651336225dc172e51b2ce</code>.
+          </p>
+          <p>
+            We can query the network by performing an HTTP request, either by the network's id or the network's chain
+            hash, to the <a href="https://docs.drand.love/developer/API-v2/drand-http-api" target="_blank">API-V2</a>
+            endpoints. An example curl query:
+          </p>
+
+          <code>
+            curl -L 'https://api.drand.sh/v2/beacons/default/rounds/latest' -H 'Accept: application/json'
+          </code>
+
+          <p>
+            The returned json will look like this:
+          </p>
+
+          <pre class="hl"><span class="hl kwa">{</span>
+  <span class="hl kwc">&quot;round&quot;</span><span class="hl opt">:</span> <span class="hl num">6522645</span><span class="hl opt">,</span>
+  <span class="hl kwc">&quot;signature&quot;</span><span class="hl opt">:</span> <span class="hl sng">&quot;b6b13209bfd5377974588d0666a5a9363e5f017764fa379cdb688bd3250b633941f245c8220d3e4890cd207d8694f174011831566b0cf2389189c6cd6961deb54178dfdf9b9ae59f03ed1027d1d60bf1ba331ea077cd5da798154b5d3b619062&quot;</span><span class="hl opt">,</span>
+  <span class="hl kwc">&quot;previous_signature&quot;</span><span class="hl opt">:</span> <span class="hl sng">&quot;97660b3fee2af886f96a0b862cee6de9747f9abaea9632c349f0f3331d7581724d3c43a134a74497b89c0ee533994c340412b1188c5d6945ce86dd1c6a20803502699ff3ea5b10fa9e4a21442ed5b6b4c4f5d90e96a0fead44193929dcfd95b4&quot;</span>
+<span class="hl kwa">}</span>
+</pre>
+
+          <p>
+            But where's the randomness? The randomnes is the signature where you can run it through a KDF, like a
+            hash function. In <a href="https://docs.drand.love/developer/API-v1/drand-http-api"
+              target="_blank">API-V1</a>,
+            they add <code>randomness</code> in the returned JSON, which is just a sha256 digest of the signature.
+          </p>
+
+          <p>
+            Using API-V2 endpoints, we will decrease the amount of transefered data and derive the randomness using
+            any KDF. To be compatible with API-V1, which provides <code>randomness</code> in the returned JSON, I used
+            sha256 to derive the randomness when querying API-V2.
+          </p>
+
+          <p>
+            <code>default</code> is a chained network, so the result will contain
+            <code>round</code>, <code>signature</code>, and <code>previous_signature</code>, to be able to verify the
+            randomness.
+          </p>
+
+          <p>
+            We can't just pass the signature as it to sha256, we need first to decode it, then pass it to sha256,
+            because API-V1 run sha256 on the raw value of the signature. In go, it will look like this:
+          </p>
+
+          <pre class="hl">decodedSignature<span class="hl opt">,</span> err <span class="hl opt">:=</span> hex<span class="hl opt">.</span><span class="hl kwd">DecodeString</span><span class="hl opt">(</span>signature<span class="hl opt">)</span>
+<span class="hl kwa">if</span> err <span class="hl opt">!=</span> <span class="hl kwb">nil</span> <span class="hl opt">{</span>
+        <span class="hl slc">// ...</span>
+<span class="hl opt">}</span>
+
+kdf <span class="hl opt">:=</span> sha256<span class="hl opt">.</span><span class="hl kwd">New</span><span class="hl opt">()</span>
+<span class="hl kwa">if</span> _<span class="hl opt">,</span> err <span class="hl opt">:=</span> kdf<span class="hl opt">.</span><span class="hl kwd">Write</span><span class="hl opt">(</span>decodedSignature<span class="hl opt">);</span> err <span class="hl opt">!=</span> <span class="hl kwb">nil</span> <span class="hl opt">{</span>
+        <span class="hl slc">// ...</span>
+<span class="hl opt">}</span>
+
+randomness <span class="hl opt">:=</span> hex<span class="hl opt">.</span><span class="hl kwd">EncodeToString</span><span class="hl opt">(</span>kdf<span class="hl opt">.</span><span class="hl kwd">Sum</span><span class="hl opt">(</span><span class="hl kwb">nil</span><span class="hl opt">))</span>
+</pre>
+
+          <p>
+            You can replace sha256 with any cryptographically secure KDF of your choice.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4 class="mb-2"><i class="icon ph-duotone ph-spinner-ball"></i>How the Balls Get Drawn?</h4>
+          <p>
+            After having the sha256 (hex) digest, we can go throught it one byte at a time and convert it
+            to a range of 1 to 42 until we have <strong>7 unique</strong> balls. A byte consists of 2 hex digits, and
+            the range goes from
+            0 to
+            255 covering 256
+            numbers.
+          </p>
+
+          <p>
+            The question is: &ldquo;How can we convert that single-byte randomness to a range of 1 to 42?&rdquo;
+          </p>
+
+          <p>
+            Speaking programmatically, can't we just do <code>mod 42</code> and call it a day? <strong>No. Why?</strong>
+          </p>
+
+          <p>
+            Because 42 doesn't divide 256 (256/42=6.09), so there's a small bias in the first 4 numbers (0, 1, 2, 3),
+            that are more
+            frequent to be drawn. Here's
+            the frequency:
+          </p>
+
+          <div class="card-image">
+            <img class="only-on-dark card-image-occupy" src="images/distribution-of-x-mod-42-dark.png"
+              alt="Distribution of x mod 42" />
+            <img class="only-on-light card-image-occupy" src="images/distribution-of-x-mod-42-light.png"
+              alt="Distribution of x mod 42" />
+          </div>
+
+          <p>
+            <strong>What is the Solution?</strong>
+            We can simply discard the numbers greater than or equal to 252 (255-252+1=4),
+            because they cause it. The frequency is now:
+          </p>
+
+          <div class="card-image">
+            <img class="only-on-dark card-image-occupy" src="images/distribution-2-of-x-mod-42-dark.png"
+              alt="Distribution of x mod 42" />
+            <img class="only-on-light card-image-occupy" src="images/distribution-2-of-x-mod-42-light.png"
+              alt="Distribution of x mod 42" />
+          </div>
+
+          <p>
+            Now we can build the LOTO system!
+          </p>
+        </div>
+
+        <div class="card">
+          <h4 class="mb-2"><i class="icon ph-duotone ph-hammer"></i>Building the LOTO System</h4>
+          <p>
+            For this system, I wanted:
+          </p>
+
+          <ul>
+            <li>
+              No backend.
+            </li>
+            <li>
+              Everyone accessing the page will have the same 7 balls, and keep periodically updating upon new rounds.
+            </li>
+            <li>
+              Each drawn ball share the same color for everyone.
+            </li>
+          </ul>
+
+          <p>
+            I've build the website using HTML, CSS, JS, and WebAssembly (Go), elliminating the need for a
+            centralized server. The second requirement is solved by calling each <code>01</code> and <code>31</code>
+            second of each minute an exported Go function that fetchs and updates the balls. <strong>Why each 01 and 31
+              of each minute?</strong> Because, the <code>default</code> network updates the randomness each 30 seconds,
+            so on <code>00</code> and <code>30</code> of each minute, and by using <code>01</code> and<code>31</code>, I
+            am letting the network propagates the update.
+          </p>
+
+          <p>
+            To accomplish the third requirement, I used the chosen random byte as a source of entropy when choosing the
+            color of the ball, and the random byte is the same accross all everyone for round n for each ball. The go
+            code looks like this:
+          </p>
+
+          <pre class="hl"><span class="hl kwa">func</span> <span class="hl kwd">randomBallColorFromSeed</span><span class="hl opt">(</span>randomness <span class="hl kwb">byte</span><span class="hl opt">)</span> BallColor <span class="hl opt">{</span>
+        source <span class="hl opt">:=</span> rand<span class="hl opt">.</span><span class="hl kwd">NewSource</span><span class="hl opt">(</span><span class="hl kwb">int64</span><span class="hl opt">(</span>randomness<span class="hl opt">))</span>
+        r <span class="hl opt">:=</span> rand<span class="hl opt">.</span><span class="hl kwd">New</span><span class="hl opt">(</span>source<span class="hl opt">)</span>
+        <span class="hl kwa">return</span> ballColors<span class="hl opt">[</span>r<span class="hl opt">.</span><span class="hl kwd">Intn</span><span class="hl opt">(</span><span class="hl kwb">len</span><span class="hl opt">(</span>ballColors<span class="hl opt">))]</span>
+<span class="hl opt">}</span>
+</pre>
+
+        </div>
+
+        <div class="card">
+          <h4 class="mb-2"><i class="icon ph-duotone ph-crane"></i>LOTO System in Practice</h4>
+
+          <p class="card-align-center mb-0">
+            Current randomness:
+          </p>
+          <div class="card-align-center mb-2">
+            <code id="current-randomness"></code>
+          </div>
+
+          <div id="current-randomness-byte-1-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-1-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 1: <span id="current-randomness-byte-1-value">1</span></strong> &rarr; <span
+                id="current-randomness-byte-1-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-2-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-2-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 2: <span id="current-randomness-byte-2-value">2</span></strong> &rarr; <span
+                id="current-randomness-byte-2-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-3-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-3-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 3: <span id="current-randomness-byte-3-value">3</span></strong> &rarr; <span
+                id="current-randomness-byte-3-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-4-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-4-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 4: <span id="current-randomness-byte-4-value">4</span></strong> &rarr; <span
+                id="current-randomness-byte-4-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-5-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-5-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 5: <span id="current-randomness-byte-5-value">5</span></strong> &rarr; <span
+                id="current-randomness-byte-5-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-6-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-6-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 6: <span id="current-randomness-byte-6-value">6</span></strong> &rarr; <span
+                id="current-randomness-byte-6-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-7-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-7-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 7: <span id="current-randomness-byte-7-value">7</span></strong> &rarr; <span
+                id="current-randomness-byte-7-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-8-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-8-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 8: <span id="current-randomness-byte-8-value">8</span></strong> &rarr; <span
+                id="current-randomness-byte-8-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-9-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-9-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 9: <span id="current-randomness-byte-9-value">9</span></strong> &rarr; <span
+                id="current-randomness-byte-9-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-10-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-10-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 10: <span id="current-randomness-byte-10-value">10</span></strong> &rarr; <span
+                id="current-randomness-byte-10-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-11-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-11-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 11: <span id="current-randomness-byte-11-value">11</span></strong> &rarr; <span
+                id="current-randomness-byte-11-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-12-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-12-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 12: <span id="current-randomness-byte-12-value">12</span></strong> &rarr; <span
+                id="current-randomness-byte-12-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-13-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-13-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 13: <span id="current-randomness-byte-13-value">13</span></strong> &rarr; <span
+                id="current-randomness-byte-13-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-14-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-14-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 14: <span id="current-randomness-byte-14-value">14</span></strong> &rarr; <span
+                id="current-randomness-byte-14-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-15-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-15-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 15: <span id="current-randomness-byte-15-value">15</span></strong> &rarr; <span
+                id="current-randomness-byte-15-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-16-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-16-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 16: <span id="current-randomness-byte-16-value">16</span></strong> &rarr; <span
+                id="current-randomness-byte-16-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-17-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-17-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 17: <span id="current-randomness-byte-17-value">17</span></strong> &rarr; <span
+                id="current-randomness-byte-17-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-18-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-18-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 18: <span id="current-randomness-byte-18-value">18</span></strong> &rarr; <span
+                id="current-randomness-byte-18-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-19-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-19-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 19: <span id="current-randomness-byte-19-value">19</span></strong> &rarr; <span
+                id="current-randomness-byte-19-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-20-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-20-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 20: <span id="current-randomness-byte-20-value">20</span></strong> &rarr; <span
+                id="current-randomness-byte-20-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-21-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-21-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 21: <span id="current-randomness-byte-21-value">21</span></strong> &rarr; <span
+                id="current-randomness-byte-21-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-22-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-22-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 22: <span id="current-randomness-byte-22-value">22</span></strong> &rarr; <span
+                id="current-randomness-byte-22-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-23-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-23-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 23: <span id="current-randomness-byte-23-value">23</span></strong> &rarr; <span
+                id="current-randomness-byte-23-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-24-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-24-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 24: <span id="current-randomness-byte-24-value">24</span></strong> &rarr; <span
+                id="current-randomness-byte-24-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-25-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-25-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 25: <span id="current-randomness-byte-25-value">25</span></strong> &rarr; <span
+                id="current-randomness-byte-25-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-26-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-26-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 26: <span id="current-randomness-byte-26-value">26</span></strong> &rarr; <span
+                id="current-randomness-byte-26-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-27-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-27-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 27: <span id="current-randomness-byte-27-value">27</span></strong> &rarr; <span
+                id="current-randomness-byte-27-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-28-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-28-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 28: <span id="current-randomness-byte-28-value">28</span></strong> &rarr; <span
+                id="current-randomness-byte-28-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-29-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-29-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 29: <span id="current-randomness-byte-29-value">29</span></strong> &rarr; <span
+                id="current-randomness-byte-29-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-30-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-30-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 30: <span id="current-randomness-byte-30-value">30</span></strong> &rarr; <span
+                id="current-randomness-byte-30-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-31-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-31-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 31: <span id="current-randomness-byte-31-value">31</span></strong> &rarr; <span
+                id="current-randomness-byte-31-info"></span>
+            </p>
+          </div>
+          <div id="current-randomness-byte-32-main" class="alert unused">
+            <p class="mb-0">
+              <strong><i id="current-randomness-byte-32-icon" class="icon ph-duotone ph-check-fat"></i></strong>
+              <strong>Byte 32: <span id="current-randomness-byte-32-value">32</span></strong> &rarr; <span
+                id="current-randomness-byte-32-info"></span>
+            </p>
+          </div>
+
+        </div>
+
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container ">
+      <p>
+        Made with ❤️ using Go.
+      </p>
+      <p>
+        <a href="https://codeberg.org/raphaeltannous/goLOTO">Go source code</a> is under the MIT license.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

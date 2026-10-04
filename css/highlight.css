@@ -1,0 +1,100 @@
+pre.hl {
+  color: var(--ink);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: var(--page-bg);
+  font-size: 10pt;
+
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.hl.num {
+  color: #fd971f;
+}
+
+.hl.esc {
+  color: #a1efe4;
+}
+
+.hl.sng {
+  color: #a6e22e;
+}
+
+.hl.pps {
+  color: #a1efe4;
+}
+
+.hl.slc {
+  color: #75715e;
+  font-style: italic;
+}
+
+.hl.com {
+  color: #75715e;
+  font-style: italic;
+}
+
+.hl.ppc {
+  color: #cc6633;
+}
+
+.hl.opt {
+  color: var(--ink);
+}
+
+.hl.ipl {
+  color: #fd971f;
+}
+
+.hl.lin {
+  color: #a59f85;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.hl.hvr {
+  cursor: help;
+}
+
+.hl.erm {
+  color: #ff0000;
+  font-weight: bold;
+  border: solid 1px red;
+  margin-left: 3em;
+}
+
+.hl.err {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.hl.kwa {
+  color: #ae81ff;
+  font-weight: bold;
+}
+
+.hl.kwb {
+  color: #66d9ef;
+  font-weight: bold;
+}
+
+.hl.kwc {
+  color: #f92672;
+  font-weight: bold;
+}
+
+.hl.kwd {
+  color: #f4bf75;
+  font-weight: bold;
+}
+
+.hl.kwe {
+  color: #cc6633;
+  font-weight: bold;
+}
+
+.hl.kwf {
+  color: #fd971f;
+  font-weight: bold;
+}
