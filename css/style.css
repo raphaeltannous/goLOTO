@@ -2289,3 +2289,8 @@ p>a.btn {
 		font-size: 1.2rem;
 	}
 }
+
+#current-randomness {
+	width: 80%;
+	text-wrap: wrap;
+}

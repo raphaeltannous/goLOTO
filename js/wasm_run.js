@@ -24,7 +24,7 @@ const go = new Go();
 const runWasm = async () => {
   const importObject = go.importObject;
 
-  const wasmModule = await instantiateWASM("https://cdn.riyt.dev/goLOTO.wasm", importObject);
+  const wasmModule = await instantiateWASM("../goLOTO.wasm", importObject);
 
   go.run(wasmModule.instance);
 
