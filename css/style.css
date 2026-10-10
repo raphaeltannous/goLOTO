@@ -272,7 +272,7 @@ hr {
 	top: 0;
 	background-color: var(--page-bg);
 	border-bottom: 1px solid var(--border);
-	padding: 0.65rem 0;
+	padding: 0.65rem 0 0 0;
 	z-index: 1000;
 }
 
@@ -2293,4 +2293,19 @@ p>a.btn {
 #current-randomness {
 	width: 80%;
 	text-wrap: wrap;
+	text-align: center;
+}
+
+#progress-bar-outer {
+	width: 100%;
+}
+
+#progress-bar-inner {
+	width: 0%;
+	height: 10px;
+	background-color: var(--secondary);
+}
+
+#current-randomness-byte-32-main {
+	margin-bottom: 0;
 }

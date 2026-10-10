@@ -65,7 +65,13 @@
       <div class="navbar-links">
         <a href="#drawn-balls">Drawn Balls</a>
         <a href="#how-it-works">How it Works</a>
+        <a href="#byte-validation">Byte Validation</a>
+        <a href="#changelog">Changelog</a>
       </div>
+    </div>
+
+    <div id="progress-bar-outer">
+      <div id="progress-bar-inner"></div>
     </div>
   </nav>
 
@@ -110,10 +116,11 @@
           </div>
         </div>
 
-        <p class="subtitle mt-3">
-          <span>
-            The balls will be updated automatically each 30 seconds.
-          </span>
+        <p class="subtitle mt-3 mb-0">
+          The balls will be updated automatically each 30 seconds.
+        </p>
+        <p class="subtitle">
+          Check <a href="#byte-validation">Byte Validation</a> to see how each ball is picked.
         </p>
     </section>
 
@@ -370,8 +377,8 @@ randomness <span class="hl opt">:=</span> hex<span class="hl opt">.</span><span 
 
         </div>
 
-        <div class="card">
-          <h4 class="mb-2"><i class="icon ph-duotone ph-crane"></i>LOTO System in Practice</h4>
+        <div id="byte-validation" class="card">
+          <h4 class="mb-2"><i class="icon ph-duotone ph-list-checks"></i>Byte Validation</h4>
 
           <p class="card-align-center mb-0">
             Current randomness:
@@ -607,6 +614,46 @@ randomness <span class="hl opt">:=</span> hex<span class="hl opt">.</span><span 
 
         </div>
 
+    </section>
+
+    <section id="changelog" class="section">
+      <div class="subsection">
+        <h3 class="subsection-title"><i class="icon ph-duotone ph-scroll"></i>Changelog</h3>
+        <div class="card card-highlight">
+          <strong><i class="icon ph-duotone ph-tag"></i><a
+              href="https://codeberg.org/raphaeltannous/goLOTO/src/tag/v0.2.0">v0.2.1</a>:</strong>
+          <ul>
+            <li>
+              Small UI adjustments.
+            </li>
+            <li>
+              Create progress bar to show when the next fetch will happen.
+            </li>
+            <li>
+              Add Changelog.
+            </li>
+          </ul>
+
+          <strong><i class="icon ph-duotone ph-tag"></i><a
+              href="https://codeberg.org/raphaeltannous/goLOTO/src/tag/v0.2.0">v0.2.0</a> (WASM size: ~12MB):</strong>
+          <ul>
+            <li>
+              Drop <a href="https://github.com/drand/go-clients">drand/go-clients</a> and all its dependencies.
+            </li>
+            <li>
+              Use <a href="https://github.com/drand/kyber">drand/kyber</a> for signature verification.
+            </li>
+          </ul>
+
+          <strong><i class="icon ph-duotone ph-tag"></i><a
+              href="https://codeberg.org/raphaeltannous/goLOTO/src/tag/v0.1.0">v0.1.0</a> (WASM size: ~30MB):</strong>
+          <ul>
+            <li>
+              Using <a href="https://github.com/drand/go-clients">drand/go-clients</a> as a client.
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   </div>
 
