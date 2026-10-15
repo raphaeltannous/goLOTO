@@ -27,32 +27,6 @@ const runWasm = async () => {
   const wasmModule = await instantiateWASM("../goLOTO.wasm", importObject);
 
   go.run(wasmModule.instance);
-
-  function setNextFetch() {
-    const now = new Date();
-    const currentSeconds = now.getSeconds();
-    const currentMilliseconds = now.getMilliseconds();
-
-    let targetSeconds;
-    if (currentSeconds < 1) {
-      targetSeconds = 1;
-    } else if (currentSeconds < 31) {
-      targetSeconds = 31;
-    } else {
-      targetSeconds = 61;
-     }
-
-
-     const delay = ((targetSeconds - currentSeconds) * 1000) - currentMilliseconds;
-
-     setTimeout(() => {
-       fetchDrand();
-
-       setNextFetch();
-     }, delay);
-  }
-
-  fetchDrand();
-  setNextFetch();
 };
+
 runWasm();
