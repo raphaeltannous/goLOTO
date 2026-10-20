@@ -119,9 +119,25 @@
         <p class="subtitle mt-3 mb-0">
           The balls will be updated automatically each 30 seconds.
         </p>
-        <p class="subtitle">
+        <p class="subtitle mb-0">
           Check <a href="#byte-validation">Byte Validation</a> to see how each ball is picked.
         </p>
+
+        <div class="subtitle mt-2">
+          <span id="wasm-status" class="alert">
+            <i id="wasm-status-icon" class="icon ph-duotone ph-spinner-gap"></i>
+            <span id="wasm-status-text">
+              Fetching WASM...
+            </span>
+          </span>
+        </div>
+
+        <div class="subtitle mt-2">
+          <span id="wasm-fetch-error" class="alert">
+            <i id="wasm-fetch-error-icon" class="icon ph-duotone ph-x-square"></i>
+            <span id="wasm-fetch-error-text"></span>
+          </span>
+        </div>
     </section>
 
     <section id="how-it-works" class="section">
@@ -620,6 +636,21 @@ randomness <span class="hl opt">:=</span> hex<span class="hl opt">.</span><span 
       <div class="subsection">
         <h3 class="subsection-title"><i class="icon ph-duotone ph-scroll"></i>Changelog</h3>
         <div class="card card-highlight">
+          <strong><i class="icon ph-duotone ph-tag"></i><a
+              href="https://codeberg.org/raphaeltannous/goLOTO/src/tag/v0.4.0">v0.4.0</a>:</strong>
+          <ul>
+            <li>
+              Upgrade <a href="https://codeberg.org/raphaeltannous/drand">raphaeltannous/drand/client</a> to v0.2.0 to
+              allow requesting the drand round from multiple endpoints.
+            </li>
+            <li>
+              Introduce wasm fetching status.
+            </li>
+            <li>
+              Introduce fetching round error.
+            </li>
+          </ul>
+
           <strong><i class="icon ph-duotone ph-tag"></i><a
               href="https://codeberg.org/raphaeltannous/goLOTO/src/tag/v0.3.0">v0.3.0</a>:</strong>
           <ul>

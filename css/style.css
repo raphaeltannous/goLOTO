@@ -2309,3 +2309,27 @@ p>a.btn {
 #current-randomness-byte-32-main {
 	margin-bottom: 0;
 }
+
+.ph-spinner-gap {
+	display: inline-block;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#wasm-status,
+#wasm-fetch-error {
+	padding: 0.1rem;
+}
+
+#wasm-fetch-error {
+	display: none;
+}
